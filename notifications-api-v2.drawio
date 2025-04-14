@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.12" pages="3">
   <diagram name="model" id="2-Ae6M4YGkvWDGVQDyvm">
-    <mxGraphModel dx="1215" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+    <mxGraphModel dx="1215" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -67,7 +67,7 @@
         <mxCell id="V3wGfVcUluY8xS1QGYti-7" value="Max number of retries could be a system parameter.&lt;div&gt;The value could be 5 for example. This could be defined in a parameter file in the service&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="1" vertex="1">
           <mxGeometry x="510" y="270" width="180" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="V3wGfVcUluY8xS1QGYti-9" value="&lt;h1&gt;StatusTypes&lt;/h1&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;deliver failed&lt;/span&gt;&lt;/li&gt;&lt;li&gt;success&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="V3wGfVcUluY8xS1QGYti-9" value="&lt;h1&gt;NotificationStatus&lt;/h1&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;error&lt;/span&gt;&lt;/li&gt;&lt;li&gt;success&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="770" y="100" width="220" height="110" as="geometry" />
         </mxCell>
         <mxCell id="1uuLA8vocpW1gKGrDffQ-2" value="EventInput" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -146,19 +146,51 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="YO1NdaMAAxt5lBuPHGey" name="Hexagon">
+  <diagram id="YO1NdaMAAxt5lBuPHGey" name="Hexagonal architecture">
     <mxGraphModel dx="1215" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="0e4j1jzq2O6TjzAtKcG8-1" value="" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="560" y="260" width="200" height="160" as="geometry" />
+        <mxCell id="0e4j1jzq2O6TjzAtKcG8-1" value="Domain" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="250" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="4yMhJZvCG4zMo_bUfZU1-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="0e4j1jzq2O6TjzAtKcG8-2" target="0e4j1jzq2O6TjzAtKcG8-1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="0e4j1jzq2O6TjzAtKcG8-2" value="EventNotificationRepository" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="920" y="180" width="190" height="60" as="geometry" />
+          <mxGeometry x="670" y="210" width="190" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="4I8vWi9kM5923W_yXdfM-1" value="EventNotificationRepository" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="920" y="300" width="190" height="60" as="geometry" />
+        <mxCell id="4yMhJZvCG4zMo_bUfZU1-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4I8vWi9kM5923W_yXdfM-1" target="0e4j1jzq2O6TjzAtKcG8-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4I8vWi9kM5923W_yXdfM-1" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;NotificationRepository&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="310" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4yMhJZvCG4zMo_bUfZU1-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="4yMhJZvCG4zMo_bUfZU1-1" target="0e4j1jzq2O6TjzAtKcG8-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="410" />
+              <mxPoint x="590" y="366" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4yMhJZvCG4zMo_bUfZU1-1" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;NotificationPublisher&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="390" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4yMhJZvCG4zMo_bUfZU1-9" value="" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="190" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4yMhJZvCG4zMo_bUfZU1-10" value="" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="290" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4yMhJZvCG4zMo_bUfZU1-11" value="" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LK8KkA75R-8TPaEfNRmb-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LK8KkA75R-8TPaEfNRmb-1" target="0e4j1jzq2O6TjzAtKcG8-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LK8KkA75R-8TPaEfNRmb-1" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Controller&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="115" y="310" width="190" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
